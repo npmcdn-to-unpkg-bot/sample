@@ -28,7 +28,7 @@ var InitApp = function() {
 		bootApp($('body'));
 		console.log('Web app successfully bootstrapped!');
 		document.getElementById('appStatus').innerHTML =
-			'Web app successfully bootstrapped!';
+			'Web app successfully bootstrapped!!';
 	}
 };
 
