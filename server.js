@@ -13,15 +13,6 @@ app.get('/', GetMethods.getIndex);
 
 app.get('/index.html', GetMethods.getIndex);
 
-//POST signup form.
-app.post('/signup', function(req, res) {
-  var nameField = req.body.name,
-      emailField = req.body.email,
-      previewBool = req.body.previewAccess;
-  res.send(200);
-  signup(nameField, emailField, previewBool);
-});
-
 //Read config values from a JSON file.
 var config = fs.readFileSync('./app_config.json', 'utf8');
 config = JSON.parse(config);
@@ -53,5 +44,7 @@ var server = app.listen(app.get('port'), function () {
   var port = server.address().port;
 
   console.log("Example app listening at http://%s:%s", host, port);
+
+  signup('ab', 'cd', 'ef');
 
 });
