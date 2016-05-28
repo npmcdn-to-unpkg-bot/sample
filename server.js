@@ -18,7 +18,7 @@ app.get('/index.html', GetMethods.getIndex);
 // config = JSON.parse(config);
 
 //Create DynamoDB client and pass in region.
-var db = new AWS.DynamoDB({region: 'us-west-2'/*config.AWS_REGION*/});
+//var db = new AWS.DynamoDB({region: 'us-west-2'/*config.AWS_REGION*/});
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
   var formData = {
