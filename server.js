@@ -15,9 +15,9 @@ app.get('/index.html', GetMethods.getIndex);
 
 //POST signup form.
 app.post('/signup', function(req, res) {
-  var nameField = req.body.name,
-      emailField = req.body.email,
-      previewBool = req.body.previewAccess;
+  var nameField = req.name,
+      emailField = req.email,
+      previewBool = req.previewAccess;
   res.send(200);
   signup(nameField, emailField, previewBool);
 });
