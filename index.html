@@ -70,7 +70,7 @@
            <option>No</option>
          </select>
        </div>
-       <input type="submit" value="Submit"/>
+       <input type="submit" id="signup" value="Submit"/>
     </form>
 
     <div class="container">
@@ -119,7 +119,7 @@
     <script src="scripts/init.js"></script>
     <script type="text/javascript">
     $(document).ready(function() {
-      $("#signup").click(function() {
+      $("#signupForm").action(function() {
         $.post( "/signup", $("#signupForm").serialize(),
                 function(data) {
                   alert('Success:' + data);
