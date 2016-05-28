@@ -1,3 +1,5 @@
+var fs = require('fs');
+var AWS = require('aws-sdk');
 var express = require('express');
 var app = express();
 
@@ -11,7 +13,39 @@ app.get('/', GetMethods.getIndex);
 
 app.get('/index.html', GetMethods.getIndex);
 
-//app.get('/process_get', GetMethods.getProcess);
+//POST signup form.
+app.post('/signup', function(req, res) {
+  var nameField = req.body.name,
+      emailField = req.body.email,
+      previewBool = req.body.previewAccess;
+  res.send(200);
+  signup(nameField, emailField, previewBool);
+});
+
+//Read config values from a JSON file.
+var config = fs.readFileSync('./app_config.json', 'utf8');
+config = JSON.parse(config);
+
+//Create DynamoDB client and pass in region.
+var db = new AWS.DynamoDB({region: config.AWS_REGION});
+
+var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
+  var formData = {
+    TableName: config.STARTUP_SIGNUP_TABLE,
+    Item: {
+      email: {'S': emailSubmitted}, 
+      name: {'S': nameSubmitted},
+      preview: {'S': previewPreference}
+    }
+  };
+  db.putItem(formData, function(err, data) {
+    if (err) {
+      console.log('Error adding item to database: ', err);
+    } else {
+      console.log('Form data added to database.');  
+    }
+  });
+};
 
 var server = app.listen(app.get('port'), function () {
 
