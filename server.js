@@ -1,5 +1,5 @@
 var express = require('express');
-//var fs = require('fs');
+var fs = require('fs');
 var AWS = require('aws-sdk');
 var app = express();
 
@@ -14,15 +14,15 @@ app.get('/', GetMethods.getIndex);
 app.get('/index.html', GetMethods.getIndex);
 
 //Read config values from a JSON file.
-// var config = fs.readFileSync('./app_config.json', 'utf8');
-// config = JSON.parse(config);
+var config = fs.readFileSync('./app_config.json', 'utf8');
+config = JSON.parse(config);
 
 //Create DynamoDB client and pass in region.
-//var db = new AWS.DynamoDB({region: 'us-west-2'/*config.AWS_REGION*/});
+var db = new AWS.DynamoDB({region: config.AWS_REGION});
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
   var formData = {
-    TableName: 'SampleDB',//config.STARTUP_SIGNUP_TABLE,
+    TableName: config.STARTUP_SIGNUP_TABLE,
     Item: {
       email: {'S': emailSubmitted}, 
       name: {'S': nameSubmitted},
@@ -45,6 +45,6 @@ var server = app.listen(app.get('port'), function () {
 
   console.log("Example app listening at http://%s:%s", host, port);
 
-  //signup('ab', 'cd', 'ef');
+  signup('ab', 'cd', 'ef');
 
 });
