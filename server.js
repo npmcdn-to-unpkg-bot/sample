@@ -1,6 +1,6 @@
-// var fs = require('fs');
-// var AWS = require('aws-sdk');
 var express = require('express');
+//var fs = require('fs');
+var AWS = require('aws-sdk');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
@@ -18,11 +18,11 @@ app.get('/index.html', GetMethods.getIndex);
 // config = JSON.parse(config);
 
 //Create DynamoDB client and pass in region.
-//var db = new AWS.DynamoDB({region: config.AWS_REGION});
+var db = new AWS.DynamoDB({region: 'us-west-2'/*config.AWS_REGION*/});
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
   var formData = {
-    TableName: config.STARTUP_SIGNUP_TABLE,
+    TableName: 'SampleDB',//config.STARTUP_SIGNUP_TABLE,
     Item: {
       email: {'S': emailSubmitted}, 
       name: {'S': nameSubmitted},
