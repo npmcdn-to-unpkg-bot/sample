@@ -49,6 +49,9 @@
       </div>
     </div>
 
+    <div id="signupSuccess" class="alert alert-success" style="display:none">
+        <p id="signupSuccessText">Thanks for signing up! You'll be among the first to know when we launch.</p>
+      </div>
     <div class="jumbotron">
         <h1>The next big thing is coming...</h1>
         <p class="lead">We're pretty thrilled to unveil our latest creation. Sign up below to be notified when we officially launch!</p>
@@ -142,7 +145,7 @@
       $("#signup").click(function() {
         $.post( "/signup", $("#signupForm").serialize(),
                 function(data) {
-                  alert('Success! Data written to DB is: ' + data);
+                  $("#signupSuccess").show();
                 }
               )
               .always(function() {
