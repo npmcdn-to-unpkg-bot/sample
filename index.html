@@ -51,12 +51,12 @@
 
     <div id="signupSuccess" class="alert alert-success" style="display:none">
         <p id="signupSuccessText">Thanks for signing up! You'll be among the first to know when we launch.</p>
-      </div>
+    </div>
     <div class="jumbotron">
         <h1>The next big thing is coming...</h1>
         <p class="lead">We're pretty thrilled to unveil our latest creation. Sign up below to be notified when we officially launch!</p>
         <p><a class="btn btn-lg btn-success"  data-toggle="modal" href="#signupModal">Sign up today</a></p>
-      </div>
+    </div>
 
     <div id="appStatus">
       Waiting For Device...
@@ -148,6 +148,9 @@
                   $("#signupSuccess").show();
                 }
               )
+              .error(function(xhr) {
+                alert('Error! Status is: ' + xhr.status.toString())
+              })
               .always(function() {
                 $("#signupModal").modal('hide');
               });
