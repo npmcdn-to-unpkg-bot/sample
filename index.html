@@ -146,6 +146,7 @@
         $.post( "/signup", $("#signupForm").serialize(),
                 function(data) {
                   $("#signupSuccess").show();
+                  alert('Success! Data is: ' + data);
                 }
               )
               .error(function(xhr) {
