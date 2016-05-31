@@ -13,6 +13,10 @@ app.get('/', GetMethods.getIndex);
 
 app.get('/index.html', GetMethods.getIndex);
 
+//Read config values from a JSON file.
+var config = fs.readFileSync('./app_config.json', 'utf8');
+config = JSON.parse(config);
+
 //Create DynamoDB client and pass in region.
 var db = new AWS.DynamoDB({region: config.AWS_REGION});
 
@@ -24,10 +28,6 @@ app.post('/signup', function(req, res) {
   signup(nameField, emailField, previewBool);
   res.send(200);
 });
-
-//Read config values from a JSON file.
-var config = fs.readFileSync('./app_config.json', 'utf8');
-config = JSON.parse(config);
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
   var formData = {
