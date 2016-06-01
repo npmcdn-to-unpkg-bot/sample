@@ -6,6 +6,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 app.use(express.static(__dirname));
+app.use(express.bodyParser());
 
 var GetMethods = require('./server/GetMethods.js');
 
