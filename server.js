@@ -17,11 +17,11 @@ var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
 app.post('/signup', function(req, res) {
-  var nameField = req.body.name,
-      emailField = req.body.email,
-      previewBool = req.body.previewAccess;
+  var nameField = req.name,
+      emailField = req.email,
+      previewBool = req.previewAccess;
   signup(nameField, emailField, previewBool);
-  res.send(200);
+  res.status(200).end()
 });
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
