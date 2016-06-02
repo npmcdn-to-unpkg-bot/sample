@@ -1,13 +1,9 @@
 var express = require('express');
-var fs = require('fs');
 var AWS = require('aws-sdk');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
 app.use(express.static(__dirname));
 
 var GetMethods = require('./server/GetMethods.js');
@@ -16,12 +12,8 @@ app.get('/', GetMethods.getIndex);
 
 app.get('/index.html', GetMethods.getIndex);
 
-//Read config values from a JSON file.
-var config = fs.readFileSync('./app_config.json', 'utf8');
-config = JSON.parse(config);
-
 //Create DynamoDB client and pass in region.
-var db = new AWS.DynamoDB({region: config.AWS_REGION});
+var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
 app.post('/signup', function(req, res) {
@@ -34,7 +26,7 @@ app.post('/signup', function(req, res) {
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
   var formData = {
-    TableName: config.STARTUP_SIGNUP_TABLE,
+    TableName: "SampleDB",
     Item: {
       email: {'S': emailSubmitted}, 
       name: {'S': nameSubmitted},
