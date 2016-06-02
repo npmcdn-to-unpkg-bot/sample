@@ -1,9 +1,13 @@
 var express = require('express');
+var routes = require('./routes');
 var AWS = require('aws-sdk');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
 app.use(express.static(__dirname));
 
 var GetMethods = require('./server/GetMethods.js');
@@ -17,9 +21,9 @@ var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
 app.post('/signup', function(req, res) {
-  var nameField = req.name,
-      emailField = req.email,
-      previewBool = req.previewAccess;
+  var nameField = req.body.name,
+      emailField = req.body.email,
+      previewBool = req.body.previewAccess;
   signup(nameField, emailField, previewBool);
   res.status(200).end();
 });
