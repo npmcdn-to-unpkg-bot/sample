@@ -21,7 +21,7 @@ app.post('/signup', function(req, res) {
       emailField = req.email,
       previewBool = req.previewAccess;
   signup(nameField, emailField, previewBool);
-  res.status(200).end()
+  res.status(200).end();
 });
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
