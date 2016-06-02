@@ -1,13 +1,14 @@
 var express = require('express');
 var fs = require('fs');
 var AWS = require('aws-sdk');
-var bodyParser = require('body-parser');
 var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
 app.use(express.static(__dirname));
-app.use(bodyParser.json());
 
 var GetMethods = require('./server/GetMethods.js');
 
