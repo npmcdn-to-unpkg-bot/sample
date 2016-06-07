@@ -143,7 +143,7 @@
     <script type="text/javascript">
     $(document).ready(function() {
       $("#signup").click(function() {
-        $.post( "/signup", $("#signupForm").serialize(),
+        $.post( "sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com/signup", $("#signupForm").serialize(),
                 function(data) {
                   $("#signupSuccess").show();
                   alert('Success! Data is: ' + data);
