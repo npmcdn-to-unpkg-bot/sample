@@ -42,7 +42,10 @@ app.post('/signup', function(req, res) {
   //     emailField = req.body.email,
   //     previewBool = req.body.previewAccess;
   // signup(nameField, emailField, previewBool);
-  res.status(200).end();
+  res.writeHead(200, {
+    'Access-Control-Allow-Origin' : '*'
+  }).end();
+  //res.status(200).end();
 });
 
 var signup = function (nameSubmitted, emailSubmitted, previewPreference) {
