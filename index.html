@@ -154,6 +154,7 @@
             url: p,
             data: $("#signupForm").serialize(),
             dataType: "json",
+            cache: false,
             success: function(data){
                 $("#signupSuccess").show();
                 alert('Success! Data is: ' + data); 
