@@ -144,9 +144,9 @@
     $(document).ready(function() {
       $("#signup").click(function() {
         var p = "";
-        // if (window.cordova !== undefined) {
-        //   p = "sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
-        // }
+        if (window.cordova !== undefined) {
+          p = "http://sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
+        }
         p += "/signup";
         $.ajax({
             type: "POST",
@@ -162,7 +162,7 @@
             error: function(XMLHttpRequest, textStatus, errorThrown) { 
                 alert("Status: " + textStatus); alert("Error: " + errorThrown); 
             },
-            always: function() {
+            complete: function() {
                 $("#signupModal").modal('hide');
             }
         });
