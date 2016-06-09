@@ -44,7 +44,8 @@ app.post('/signup', function(req, res) {
   // signup(nameField, emailField, previewBool);
   res.writeHead(200, {
     'Access-Control-Allow-Origin' : '*'
-  }).end();
+  });
+  res.end();
   //res.status(200).end();
 });
 
