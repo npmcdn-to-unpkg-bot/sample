@@ -148,19 +148,38 @@
         //   p = "sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
         // }
         p += "/signup";
-        $.post(p, $("#signupForm").serialize(),
-                function(data) {
-                  $("#signupSuccess").show();
-                  alert('Success! Data is: ' + data);
-                }
-              )
-              .error(function(xhr) {
-                alert('Error! Status is: ' + xhr.status.toString());
-              })
-              .always(function() {
+        $.ajax({
+            type: "POST",
+            async: true,
+            url: p,
+            data: $("#signupForm").serialize(),
+            dataType: "json",
+            success: function(data){
+                $("#signupSuccess").show();
+                alert('Success! Data is: ' + data); 
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+            },
+            always: function() {
                 $("#signupModal").modal('hide');
-              });
-      })
+            }
+        });
+
+
+      //   $.post(p, $("#signupForm").serialize(),
+      //           function(data) {
+      //             $("#signupSuccess").show();
+      //             alert('Success! Data is: ' + data);
+      //           }
+      //         )
+      //         .error(function(xhr) {
+      //           alert('Error! Status is: ' + xhr.status.toString());
+      //         })
+      //         .always(function() {
+      //           $("#signupModal").modal('hide');
+      //         });
+      // })
     })
     </script>
     
