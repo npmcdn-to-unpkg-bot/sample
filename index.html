@@ -143,14 +143,20 @@
     <script type="text/javascript">
     $(document).ready(function() {
       $("#signup").click(function() {
-        $.post( "sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com/signup", $("#signupForm").serialize(),
+        var p = "";
+        if (window.cordova !== undefined) {
+          p = "sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
+        }
+        p += "/signup";
+        alert(p);
+        $.post(p, $("#signupForm").serialize(),
                 function(data) {
                   $("#signupSuccess").show();
                   alert('Success! Data is: ' + data);
                 }
               )
               .error(function(xhr) {
-                alert('Error! Status is: ' + xhr.status.toString())
+                alert('Error! Status is: ' + xhr.status.toString("))
               })
               .always(function() {
                 $("#signupModal").modal('hide');
