@@ -143,6 +143,8 @@
     <script type="text/javascript">
     $(document).ready(function() {
       $("#signup").click(function() {
+        var dataStr = $("#signupForm").serialize();
+        console.log('Data is: ' + dataStr);
         var p = "";
         if (window.cordova !== undefined) {
           p = "http://sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
@@ -152,7 +154,7 @@
             type: "POST",
             async: true,
             url: p,
-            data: $("#signupForm").serialize(),
+            data: dataStr,
             dataType: "json",
             cache: false,
             success: function(data){
@@ -167,21 +169,6 @@
             }
         });
       });
-
-
-      //   $.post(p, $("#signupForm").serialize(),
-      //           function(data) {
-      //             $("#signupSuccess").show();
-      //             alert('Success! Data is: ' + data);
-      //           }
-      //         )
-      //         .error(function(xhr) {
-      //           alert('Error! Status is: ' + xhr.status.toString());
-      //         })
-      //         .always(function() {
-      //           $("#signupModal").modal('hide');
-      //         });
-      // })
     });
     </script>
     

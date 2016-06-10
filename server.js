@@ -6,6 +6,7 @@ var app = express();
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(parser.json());
 app.use(express.static(__dirname));
 
 var GetMethods = require('./server/GetMethods.js');
@@ -18,29 +19,7 @@ app.get('/index.html', GetMethods.getIndex);
 var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
-app.post('/signup',
-         parser.json(),
-         function(req, res) {
-  // var body = '';
-
-  // req.on('data', function (data) {
-  //     body += data;
-
-  //     // Too much POST data, kill the connection!
-  //     // 1e6 === 1 * Math.pow(10, 6) === 1 * 1000000 ~~~ 1MB
-  //     if (body.length > 1e6)
-  //         req.connection.destroy();
-  // });
-
-  // req.on('end', function () {
-  //     var post = qs.parse(body);
-  //     var nameField = post.name,
-  //     emailField = post.email,
-  //     previewBool = post.previewAccess;
-  //     signup(nameField, emailField, previewBool);
-  // });
-
-
+app.post('/signup', function(req, res) {
   var nameField = req.body.name,
       emailField = req.body.email,
       previewBool = req.body.previewAccess;
