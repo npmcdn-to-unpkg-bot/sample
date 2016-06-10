@@ -1,5 +1,4 @@
 var express = require('express');
-// var qs = require('querystring');
 var parser = require('body-parser');
 var AWS = require('aws-sdk');
 var app = express();
@@ -20,6 +19,8 @@ var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
 app.post('/signup', function(req, res) {
+  console.log('req is: ' + req);
+  console.log('Parsed req is: ' + JSON.parse(req));
   var nameField = req.body.name,
       emailField = req.body.email,
       previewBool = req.body.previewAccess;
