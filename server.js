@@ -6,6 +6,7 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 
 app.use(parser.json());
+app.use(parser.urlencoded({extended: true }));
 app.use(express.static(__dirname));
 
 var GetMethods = require('./server/GetMethods.js');
@@ -19,11 +20,10 @@ var db = new AWS.DynamoDB({region: "us-west-2"});
 
 //POST signup form.
 app.post('/signup', function(req, res) {
-  res.write(req);
-  // var nameField = req.body.name,
-  //     emailField = req.body.email,
-  //     previewBool = req.body.previewAccess;
-  // signup(nameField, emailField, previewBool);
+  var nameField = req.body.name,
+      emailField = req.body.email,
+      previewBool = req.body.previewAccess;
+  signup(nameField, emailField, previewBool);
   res.writeHead(200, {
     'Access-Control-Allow-Origin' : '*'
   });
