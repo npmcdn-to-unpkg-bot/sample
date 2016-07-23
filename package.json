@@ -12,7 +12,6 @@
     "aws-sdk": "^2.3.16",
     "body-parser": "^1.15.1",
     "fs": "0.0.2",
-    "satellizer": "^0.14.1",
-    "toastr": "^2.1.2"
+    "satellizer": "^0.14.1"
   }
 }
