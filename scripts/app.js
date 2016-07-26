@@ -14,8 +14,6 @@ var getAppName = function() {
 	return 'angularAppApp';
 };
 
-var appModules = ['ngResource', 'ngMessages', 'ngAnimate', 'toastr', 'ui.router', 'satellizer'];
-
 // The app itself
 var app = angular.module(getAppName(), appModules);
 
