@@ -15,7 +15,8 @@ var getAppName = function() {
 };
 
 // The app itself
-var app = angular.module(getAppName(), appModules);
+var realApp = angular.module(getAppName(), appModules);
+var app = angular.module(getAppName());
 
 // Bootstrap the app to the desired location
 var bootApp = function(location) {
