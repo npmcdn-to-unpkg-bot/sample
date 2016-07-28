@@ -10,7 +10,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({extended: true }));
 app.use(express.static(path.join(__dirname, '..')));
 
-var GetMethods = require('/GetMethods.js');
+var GetMethods = require('./GetMethods.js');
 
 app.get('/', GetMethods.getIndex);
 

@@ -6,6 +6,7 @@
     "start": "node server/server.js"
   },
   "dependencies": {
+    "async": "^2.0.1",
     "aws-sdk": "^2.4.10",
     "body-parser": "^1.15.2",
     "express": "4.8.0",
