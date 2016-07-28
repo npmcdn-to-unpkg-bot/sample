@@ -3,14 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
-    "express": "4.8.0"
-  },
-  "devDependencies": {
-    "aws-sdk": "^2.3.16",
-    "body-parser": "^1.15.1",
+    "aws-sdk": "^2.4.10",
+    "body-parser": "^1.15.2",
+    "express": "4.8.0",
     "fs": "0.0.2",
     "satellizer": "^0.14.1"
   }
