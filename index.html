@@ -29,7 +29,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
+<!--     <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"><i class="ion-ios7-pulse-strong"></i> Satellizer</a>
       </div>
@@ -46,7 +46,7 @@
       </ul>
     </div>
 
-    <div ui-view></div>
+    <div ui-view></div> -->
 
 
 <!--     <div class="header">
@@ -162,55 +162,60 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <!-- App modules -->
-    <script src="scripts/appModules.js"></script>
+    <!-- <script src="scripts/appModules.js"></script> -->
 
     <!-- The angular app -->
-    <script src="scripts/app.js"></script>
+    <!-- <script src="scripts/app.js"></script> -->
 
     <!-- App configurations -->
-    <script src="scripts/appConfig.js"></script>
+    <!-- <script src="scripts/appConfig.js"></script> -->
 
     <!-- Other angular components -->
-    <script src="scripts/controllers/main.js"></script>
+    <!-- <script src="scripts/controllers/main.js"></script> -->
     <!-- endbuild -->
 
     <!-- Cordova object (auto generated file) -->
-    <script src="cordova.js"></script>
+    <!-- <script src="cordova.js"></script> -->
 
     <!-- App-specific scripts -->
+    <!-- 
     <script src="scripts/mobile.js"></script>
     <script src="scripts/init.js"></script>
-    // <script type="text/javascript">
-    // $(document).ready(function() {
-    //   $("#signup").click(function() {
-    //     var dataStr = $("#signupForm").serialize();
-    //     console.log('Data is: ' + dataStr);
-    //     var p = "";
-    //     if (window.cordova !== undefined) {
-    //       p = "http://sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
-    //     }
-    //     p += "/signup";
-    //     $.ajax({
-    //         type: "POST",
-    //         async: true,
-    //         url: p,
-    //         data: dataStr,
-    //         cache: false,
-    //         success: function(data){
-    //             $("#signupSuccess").show();
-    //             alert('Success! Data is: ' + data); 
-    //         },
-    //         error: function(XMLHttpRequest, textStatus, errorThrown) { 
-    //             alert("Status: " + textStatus); alert("Error: " + errorThrown); 
-    //         },
-    //         complete: function() {
-    //             $("#signupModal").modal('hide');
-    //         }
-    //     });
-    //   });
-    // });
-    // </script>
+    -->
+    <!--
+    <script type="text/javascript">
+     $(document).ready(function() {
+      $("#signup").click(function() {
+        var dataStr = $("#signupForm").serialize();
+        console.log('Data is: ' + dataStr);
+        var p = "";
+        if (window.cordova !== undefined) {
+          p = "http://sampleserver.gewji6ncrf.us-west-2.elasticbeanstalk.com";
+        }
+        p += "/signup";
+        $.ajax({
+            type: "POST",
+            async: true,
+            url: p,
+            data: dataStr,
+            cache: false,
+            success: function(data){
+                $("#signupSuccess").show();
+                alert('Success! Data is: ' + data); 
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+            },
+            complete: function() {
+                $("#signupModal").modal('hide');
+            }
+        });
+      });
+    });
+    </script>
+    -->
 
+    <!--
     <script src="/directives/passwordStrength.js"></script>
     <script src="/directives/passwordMatch.js"></script>
     <script src="/controllers/home.js"></script>
@@ -220,6 +225,7 @@
     <script src="/controllers/profile.js"></script>
     <script src="/controllers/navbar.js"></script>
     <script src="/services/account.js"></script>
+    -->
     
 </body>
 </html>
