@@ -2,16 +2,16 @@
 
 /**
  * @ngdoc overview
- * @name angularAppApp
+ * @name angularcordovaapp
  * @description
- * # angularAppApp
+ * # angularcordovaapp
  *
  * Main module of the application.
  */
 
 // Get the app name
 var getAppName = function() {
-	return 'angularAppApp';
+	return 'angularcordovaapp';
 };
 
 // The app itself

@@ -6,14 +6,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!--
     <link href="favicon.png" rel="shortcut icon">
     <link href="//fonts.googleapis.com/css?family=Roboto|Montserrat:400,700|Open+Sans:400,300,600" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdn.jsdelivr.net/animatecss/3.2.0/animate.css" rel="stylesheet">
-  -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
@@ -21,17 +19,17 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <!-- <link rel="stylesheet" href="styles/main.css"> -->
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularAppApp">
-  <!-- <body> -->
+  <!-- <body ng-app="angularcordovaapp"> -->
+  <body>
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-<!--     <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
+     <div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
       <div class="navbar-header">
         <a class="navbar-brand" href="/"><i class="ion-ios7-pulse-strong"></i> Satellizer</a>
       </div>
@@ -48,10 +46,10 @@
       </ul>
     </div>
 
-    <div ui-view></div> -->
+    <div ui-view></div>
 
 
-<!--     <div class="header">
+     <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -85,14 +83,14 @@
         <h1>The next big thing is coming...</h1>
         <p class="lead">We're pretty thrilled to unveil our latest creation. Sign up below to be notified when we officially launch!</p>
         <p><a class="btn btn-lg btn-success"  data-toggle="modal" href="#signupModal">Sign up today</a></p>
-    </div> -->
+    </div>
 
     <div id="appStatus">
       Waiting For Device...
     </div>
 
     <!-- Modal -->
-<!--        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
          <div class="modal-dialog">
            <div class="modal-content">
              <div class="modal-header">
@@ -133,7 +131,7 @@
       <div class="container">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
       </div>
-    </div> -->
+    </div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -170,20 +168,18 @@
     <script src="scripts/app.js"></script>
 
     <!-- App configurations -->
-    <!-- <script src="scripts/appConfig.js"></script> -->
+    <script src="scripts/appConfig.js"></script>
 
     <!-- Other angular components -->
-    <!-- <script src="scripts/controllers/main.js"></script> -->
+    <script src="scripts/controllers/main.js"></script>
     <!-- endbuild -->
 
     <!-- Cordova object (auto generated file) -->
-    <!-- <script src="cordova.js"></script> -->
+    <script src="cordova.js"></script>
 
     <!-- App-specific scripts -->
-    <!-- 
     <script src="scripts/mobile.js"></script>
     <script src="scripts/init.js"></script>
-    -->
     <!--
     <script type="text/javascript">
      $(document).ready(function() {
@@ -217,7 +213,6 @@
     </script>
     -->
 
-    <!--
     <script src="/directives/passwordStrength.js"></script>
     <script src="/directives/passwordMatch.js"></script>
     <script src="/controllers/home.js"></script>
@@ -227,7 +222,6 @@
     <script src="/controllers/profile.js"></script>
     <script src="/controllers/navbar.js"></script>
     <script src="/services/account.js"></script>
-    -->
     
 </body>
 </html>

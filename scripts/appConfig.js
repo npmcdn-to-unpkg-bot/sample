@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // App configuration
 app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
@@ -69,49 +69,49 @@ app.config(function($stateProvider, $urlRouterProvider, $authProvider) {
     /**
      *  Satellizer config
      */
-    $authProvider.facebook({
-      clientId: 'YOUR_FACEBOOK_APP_ID'
-    });
+    // $authProvider.facebook({
+    //   clientId: 'YOUR_FACEBOOK_APP_ID'
+    // });
 
     $authProvider.google({
       clientId: '982083921915-5ja9hsv7kvu8ul1ao3mt2vv9opr27dt3.apps.googleusercontent.com'
     });
 
-    $authProvider.github({
-      clientId: 'YOUR_GITHUB_CLIENT_ID'
-    });
+    // $authProvider.github({
+    //   clientId: 'YOUR_GITHUB_CLIENT_ID'
+    // });
 
-    $authProvider.linkedin({
-      clientId: 'YOUR_LINKEDIN_CLIENT_ID'
-    });
+    // $authProvider.linkedin({
+    //   clientId: 'YOUR_LINKEDIN_CLIENT_ID'
+    // });
 
-    $authProvider.instagram({
-      clientId: 'YOUR_INSTAGRAM_CLIENT_ID'
-    });
+    // $authProvider.instagram({
+    //   clientId: 'YOUR_INSTAGRAM_CLIENT_ID'
+    // });
 
-    $authProvider.yahoo({
-      clientId: 'YOUR_YAHOO_CLIENT_ID'
-    });
+    // $authProvider.yahoo({
+    //   clientId: 'YOUR_YAHOO_CLIENT_ID'
+    // });
 
-    $authProvider.live({
-      clientId: 'YOUR_MICROSOFT_CLIENT_ID'
-    });
+    // $authProvider.live({
+    //   clientId: 'YOUR_MICROSOFT_CLIENT_ID'
+    // });
 
-    $authProvider.twitch({
-      clientId: 'YOUR_TWITCH_CLIENT_ID'
-    });
+    // $authProvider.twitch({
+    //   clientId: 'YOUR_TWITCH_CLIENT_ID'
+    // });
 
-    $authProvider.bitbucket({
-      clientId: 'YOUR_BITBUCKET_CLIENT_ID'
-    });
+    // $authProvider.bitbucket({
+    //   clientId: 'YOUR_BITBUCKET_CLIENT_ID'
+    // });
 
-    $authProvider.spotify({
-      clientId: 'YOUR_SPOTIFY_CLIENT_ID'
-    });
+    // $authProvider.spotify({
+    //   clientId: 'YOUR_SPOTIFY_CLIENT_ID'
+    // });
 
-    $authProvider.twitter({
-      url: '/auth/twitter'
-    });
+    // $authProvider.twitter({
+    //   url: '/auth/twitter'
+    // });
 
     $authProvider.oauth2({
       name: 'foursquare',
