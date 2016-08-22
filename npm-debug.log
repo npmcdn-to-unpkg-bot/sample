@@ -4,31 +4,44 @@
 1 verbose cli   'start' ]
 2 info using npm@3.8.2
 3 info using node@v5.3.0
-4 verbose stack Error: Failed to parse json
-4 verbose stack Unexpected token '/' at 5:3
-4 verbose stack   // "scripts": {
-4 verbose stack   ^
-4 verbose stack     at parseError (C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\node_modules\read-package-json\read-json.js:379:11)
-4 verbose stack     at parseJson (C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\node_modules\read-package-json\read-json.js:68:23)
-4 verbose stack     at C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\node_modules\read-package-json\read-json.js:48:5
-4 verbose stack     at C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:78:16
-4 verbose stack     at tryToString (fs.js:414:3)
-4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:401:12)
-5 verbose cwd C:\Users\Gilad\workspace\sample\www
-6 error Windows_NT 10.0.10586
-7 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Gilad\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
-8 error node v5.3.0
-9 error npm  v3.8.2
-10 error file C:\Users\Gilad\workspace\sample\www\package.json
-11 error code EJSONPARSE
-12 error Failed to parse json
-12 error Unexpected token '/' at 5:3
-12 error   // "scripts": {
-12 error   ^
-13 error File: C:\Users\Gilad\workspace\sample\www\package.json
-14 error Failed to parse package.json data.
-14 error package.json must be actual JSON, not just JavaScript.
-14 error
-14 error This is not a bug in npm.
-14 error Tell the package author to fix their package.json file. JSON.parse
-15 verbose exit [ 1, true ]
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle angularcordovaapp@0.0.1~prestart: angularcordovaapp@0.0.1
+6 silly lifecycle angularcordovaapp@0.0.1~prestart: no script for prestart, continuing
+7 info lifecycle angularcordovaapp@0.0.1~start: angularcordovaapp@0.0.1
+8 verbose lifecycle angularcordovaapp@0.0.1~start: unsafe-perm in lifecycle true
+9 verbose lifecycle angularcordovaapp@0.0.1~start: PATH: C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\Users\Gilad\workspace\sample\www\node_modules\.bin;C:\Program Files\nodejs;C:\Users\Gilad\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Program Files (x86)\iis express\PHP\v5.4;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk1.8.0_65\bin;C:\Program Files\apache-ant-1.9.6\bin;C:\Users\Gilad\AppData\Local\Android\sdk\platform-tools;C:\Users\Gilad\AppData\Local\Android\sdk\tools;C:\Program Files\Git\bin;C:\Program Files (x86)\Skype\Phone\;C:\Python34;C:\Python34\Scripts;C:\Program Files (x86)\PuTTY\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Google\google_appengine\;C:\Users\Gilad\AppData\Roaming\npm;C:\Program Files\Java\jdk1.8.0_65\bin
+10 verbose lifecycle angularcordovaapp@0.0.1~start: CWD: C:\Users\Gilad\workspace\sample\www
+11 silly lifecycle angularcordovaapp@0.0.1~start: Args: [ '/d /s /c', 'node server.js' ]
+12 silly lifecycle angularcordovaapp@0.0.1~start: Returned: code: 1  signal: null
+13 info lifecycle angularcordovaapp@0.0.1~start: Failed to exec start script
+14 verbose stack Error: angularcordovaapp@0.0.1 start: `node server.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:239:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Gilad\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid angularcordovaapp@0.0.1
+16 verbose cwd C:\Users\Gilad\workspace\sample\www
+17 error Windows_NT 10.0.10586
+18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Gilad\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+19 error node v5.3.0
+20 error npm  v3.8.2
+21 error code ELIFECYCLE
+22 error angularcordovaapp@0.0.1 start: `node server.js`
+22 error Exit status 1
+23 error Failed at the angularcordovaapp@0.0.1 start script 'node server.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the angularcordovaapp package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     node server.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs angularcordovaapp
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls angularcordovaapp
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

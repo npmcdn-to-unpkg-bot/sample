@@ -19,7 +19,7 @@ var moment = require('moment');
 var mongoose = require('mongoose');
 var request = require('request');
 
-var config = require('./config');
+var config = require('./config.js');
 
 var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
