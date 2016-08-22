@@ -2,10 +2,9 @@
   "name": "angularcordovaapp",
   "version": "0.0.1",
   "private": true,
-  // "scripts": {
-  //   "start": "node server.js"
-  // },
-  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "async": "^2.0.1",
     "aws-sdk": "^2.4.10",
