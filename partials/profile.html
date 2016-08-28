@@ -26,12 +26,14 @@
     <div class="panel-body">
       <legend><i class="ion-link"></i> Linked Accounts</legend>
       <div class="btn-group-vertical">
+        <!--
         <button class="btn btn-sm btn-danger" ng-if="user.facebook" ng-click="unlink('facebook')">
           <i class="ion-social-facebook"></i> Unlink Facebook Account
         </button>
         <button class="btn btn-sm btn-primary" ng-if="!user.facebook" ng-click="link('facebook')">
           <i class="ion-social-facebook"></i> Link Facebook Account
         </button>
+        -->
 
         <button class="btn btn-sm btn-danger" ng-if="user.google" ng-click="unlink('google')">
           <i class="ion-social-googleplus"></i> Unlink Google Account
@@ -40,6 +42,7 @@
           <i class="ion-social-googleplus"></i> Link Google Account
         </button>
 
+        <!--
         <button class="btn btn-sm btn-danger" ng-if="user.linkedin" ng-click="unlink('linkedin')">
           <i class="ion-social-linkedin"></i> Unlink LinkedIn Account
         </button>
@@ -102,6 +105,7 @@
         <button class="btn btn-sm btn-primary" ng-if="!user.twitch" ng-click="link('bitbucket')">
           <i class="fa fa-bitbucket"></i> Link Bitbucket Account
         </button>
+        -->
       </div>
     </div>
   </div>

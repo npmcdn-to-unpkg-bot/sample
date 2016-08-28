@@ -1,6 +1,6 @@
 module.exports = {
   // App Settings
-  MONGO_URI: process.env.MONGO_URI || "mongodb://giladresisi:giladresisi@ds023475.mlab.com:23475/gogroupdb",
+  MONGO_URI: process.env.MONGO_URI || 'mongodb://giladresisi:giladresisi@ds023475.mlab.com:23475/gogroupdb',
   TOKEN_SECRET: process.env.TOKEN_SECRET || 'B38E63D45418C7466ECFA5D867902F9317711E8824A8AC4B637F2BADC8FF94A3',
 
   // OAuth 2.0
